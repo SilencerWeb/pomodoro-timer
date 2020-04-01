@@ -1,0 +1,28 @@
+{
+  "name": "pomodoro-timer",
+  "version": "0.0.1",
+  "description": "Pomodoro timer",
+  "main": "src/intex.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilencerWeb/pomodoro-timer.git"
+  },
+  "keywords": [
+    "pomodoro",
+    "timer",
+    "react",
+    "redux",
+    "typescript",
+    "styled-components",
+    "jest",
+    "enzyme",
+    "storybook",
+    "webpack"
+  ],
+  "author": "Maksim Gorodov <silencer.web@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SilencerWeb/pomodoro-timer/issues"
+  },
+  "homepage": "https://github.com/SilencerWeb/pomodoro-timer#readme"
+}
