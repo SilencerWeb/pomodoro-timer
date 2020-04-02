@@ -43,6 +43,9 @@ module.exports = function(webpackEnv) {
         },
       ],
     },
+    resolve: {
+      extensions: ['.js', '.ts', '.tsx'],
+    },
     plugins: plugins,
   };
 };
