@@ -2,7 +2,21 @@
   "name": "pomodoro-timer",
   "version": "0.0.1",
   "description": "Pomodoro timer",
-  "main": "src/intex.ts",
+  "author": "Maksim Gorodov <silencer.web@gmail.com>",
+  "license": "MIT",
+  "main": "src/intex.tsx",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "NODE_ENV=production webpack --env production"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SilencerWeb/pomodoro-timer.git"
@@ -19,8 +33,6 @@
     "storybook",
     "webpack"
   ],
-  "author": "Maksim Gorodov <silencer.web@gmail.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/SilencerWeb/pomodoro-timer/issues"
   },
