@@ -1,8 +1,10 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 // Contants
 const BUILD_PATH = resolvePath('build');
+const PUBLIC_PATH = resolvePath('public');
 
 // Helpers
 function resolvePath(_path) {
@@ -12,10 +14,13 @@ function resolvePath(_path) {
 // Config
 module.exports = function(webpackEnv) {
   const isProductionBuild = webpackEnv === 'production';
-  const plugins = [];
 
+  const copyPlugin = new CopyPlugin([{ from: PUBLIC_PATH, to: BUILD_PATH }]);
+  const cleanPlugin = new CleanWebpackPlugin();
+
+  const plugins = [copyPlugin];
   if (isProductionBuild) {
-    plugins.push(new CleanWebpackPlugin());
+    plugins.push(cleanPlugin);
   }
 
   return {
